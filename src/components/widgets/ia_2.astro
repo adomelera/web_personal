@@ -1,0 +1,62 @@
+---
+import Image from '~/components/common/Image.astro';
+
+
+export interface Section {
+  question: string;
+  content: string;
+  image?: string;
+}
+
+export interface Props {
+  sections: Section[];
+}
+
+const { sections = [] } = Astro.props;
+---
+
+<section class="py-16 px-4 md:px-8 lg:px-24 bg-white">
+  {sections.map((section, index) => (
+    <div class={`
+      grid grid-cols-1 md:grid-cols-2 gap-8 mb-16
+      ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}
+    `}>
+      {/* Contenedor de imagen */}
+      <div class={`
+        w-full h-[400px] overflow-hidden
+        ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}
+      `}>
+        {section.image && (
+          <Image
+                src={section.image}
+                alt={section.question}
+                width={400}
+                height={400}
+                class="w-full h-full object-cover grayscale transition-all duration-300 hover:grayscale-0"
+                loading="lazy"
+              />
+          
+        )}
+      </div>
+
+      {/* Contenedor de texto */}
+      <div class={`
+        flex flex-col justify-center
+        ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'}
+      `}>
+        {/* Decorative amber square and title */}
+        <div class="flex items-center mb-6">          
+          <h2 class="text-4xl font-heading text-secondary font-semibold">
+            {section.question}
+          </h2>
+        </div>
+
+        {/* Content with left border */}
+        <div class="w-36 h-2 bg-primary mb-6" />                
+        <p class="text-gray-700 leading-relaxed">
+          {section.content}
+        </p>        
+      </div>
+    </div>
+  ))}
+</section>

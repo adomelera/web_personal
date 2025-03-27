@@ -1,9 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Ia_1 from '~/components/widgets/ia_1.astro';
-import Ia_2 from '~/components/widgets/ia_2.astro';
-
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
@@ -22,50 +19,6 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <Ia_1
-    title="Servicios y Talleres"
-    items={[
-      {
-        title: "Masajes",
-        subtitle: "profundos",
-        text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-        image: "~/assets/images/hand.jpg"
-      },
-      {
-        title: "Coaching",
-        subtitle: "sexual",
-        text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-        image: "~/assets/images/hand.jpg"
-      },
-      {
-        title: "Talleres",
-        subtitle: "y eventos",
-        text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-        image: "~/assets/images/hand.jpg"
-      }
-    ]}
-  />
-
-
-  <Ia_2 sections = {[
-    {
-      question: "¿Qué es el Tantra?",
-      content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-      image: "~/assets/images/238A8303.jpg"
-    },
-    {
-      question: "¿En qué consiste un masaje tántrico?",
-      content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-      image: "~/assets/images/238A8303.jpg"
-    },
-    {
-      question: "¿Es mejor el trabajo individual o en pareja?",
-      content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-      image: "~/assets/images/238A8303.jpg"
-    }
-  ]} />
-
-
   <!-- Hero Widget ******************* -->
 
   <Hero
