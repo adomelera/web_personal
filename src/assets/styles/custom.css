@@ -1,8 +1,26 @@
+img {
+  filter: grayscale(100%);
+  transition: 0.6s;
+  -webkit-filter:grayscale(100%);
+  -webkit-transition: 0.6s -webkit-filter linear;
+}
+
+img:hover, .contact-color {
+  filter: grayscale(0%);
+  -webkit-filter:grayscale(0%);
+}
+
 /* Averia Serif */
 @font-face {
   font-family: 'Averia Serif';
   src: url('../fonts/AveriaSerif-Bold.ttf') format('truetype');
   font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Averia Serif';
+  src: url('../fonts/AveriaSerif-Regular.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -17,12 +35,7 @@
   font-weight: 300;
   font-style: normal;
 }
-@font-face {
-  font-family: 'Averia Serif';
-  src: url('../fonts/AveriaSerif-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
+
 
 /* IBM Plex Serif */
 @font-face {
