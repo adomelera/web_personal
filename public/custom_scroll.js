@@ -1,4 +1,4 @@
-if (window.matchMedia('(hover: none)').matches) {
+// if (window.matchMedia('(hover: none)').matches) {
   const images = document.getElementsByTagName('img');
   const changeFrom = window.innerHeight / 2; 
 
@@ -34,4 +34,4 @@ if (window.matchMedia('(hover: none)').matches) {
   filterColorOnImages();
 
   window.addEventListener('scroll', filterColorOnImages());
-}
+// }
